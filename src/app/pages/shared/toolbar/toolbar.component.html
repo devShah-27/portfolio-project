@@ -1,0 +1,17 @@
+<p-toolbar styleClass="w-full border-noround border-none py-3 shadow-2">
+    <ng-template pTemplate="start">
+        <p-button [rounded]="true" [text]="true">
+            <i class="pi pi-bars text-2xl"></i>
+        </p-button>
+    </ng-template>
+    <ng-template pTemplate="center">
+        <div class="flex flex-wrap align-items-center gap-2 text-primary font-semibold text-2xl">
+            <i class="pi pi-home text-2xl"></i> {{pageTitle}}
+        </div>
+    </ng-template>
+    <ng-template pTemplate="end">
+        <p-button [rounded]="true" [text]="true" [raised]="true">
+            <i class="pi pi-moon text-2xl"></i>
+        </p-button>
+    </ng-template>
+</p-toolbar>
