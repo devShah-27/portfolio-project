@@ -1,4 +1,4 @@
-<p-toolbar styleClass="w-full border-noround border-none py-3 shadow-2">
+<!-- <p-toolbar styleClass="w-full border-noround border-none py-3 shadow-2">
     <ng-template pTemplate="start">
         <p-button [rounded]="true" [text]="true">
             <i class="pi pi-bars text-2xl"></i>
@@ -14,4 +14,69 @@
             <i class="pi pi-moon text-2xl"></i>
         </p-button>
     </ng-template>
-</p-toolbar>
+</p-toolbar> -->
+<div class="absolute themeSwitch">
+    <p-button [rounded]="true" [text]="true" icon="pi pi-moon" [raised]="true" size="large">
+    </p-button>
+</div>
+
+<div class="h-screen shadow-3">
+    <div class="flex flex-column align-items-center justify-content-between gap-5 px-3 py-3">
+        <div class="w-full flex gap-3">
+            <div class="w-4">
+                <p-button [rounded]="true" [text]="true" (click)="toggleSidebar()">
+                    <i class="pi pi-bars text-2xl"></i>
+                </p-button>
+            </div>
+            <div class="w-4 flex flex-wrap align-items-center">
+                <div class="text-primary font-semibold text-2xl">
+                    <i class="pi pi-home text-2xl"></i> {{pageTitle}}
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full mt-8">
+            <ul class="list-none flex flex-column gap-2">
+                <a class="no-underline" routerLink="home" routerLinkActive="active">
+                    <li>
+                        <div class="text-primary font-semibold text-2xl">
+                            <i class="pi pi-home text-2xl"></i> Home
+                        </div>
+                        <p-divider></p-divider>
+                    </li>
+                </a>
+                <a class="no-underline" routerLink="about" routerLinkActive="active">
+                    <li>
+                        <div class="text-primary font-semibold text-2xl">
+                            <i class="pi pi-user text-2xl"></i> About
+                        </div>
+                        <p-divider></p-divider>
+                    </li>
+                </a>
+                <a class="no-underline" routerLink="projects" routerLinkActive="active">
+                    <li>
+                        <div class="text-primary font-semibold text-2xl">
+                            <i class="pi pi-briefcase text-2xl"></i> Projects
+                        </div>
+                        <p-divider></p-divider>
+                    </li>
+                </a>
+                <a class="no-underline" routerLink="tech-stack" routerLinkActive="active">
+                    <li>
+                        <div class="text-primary font-semibold text-2xl">
+                            <i class="pi pi-code text-2xl"></i> Tech Stack
+                        </div>
+                        <p-divider></p-divider>
+                    </li>
+                </a>
+                <a class="no-underline" routerLink="lets-connect" routerLinkActive="active">
+                    <li>
+                        <div class="text-primary font-semibold text-2xl">
+                            <i class="pi pi-comments text-2xl"></i> Let's Connect
+                        </div>
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </div>
+</div>
